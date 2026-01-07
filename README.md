@@ -1,73 +1,42 @@
-# React + TypeScript + Vite
+# Prolegion Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[Live Demo](https://prolegioncart.netlify.app/)
 
-Currently, two official plugins are available:
+Prolegion Cart is a modern, **React + TypeScript** shopping cart application. It uses **Redux Toolkit** for state management, **React Router** for navigation, and **Tailwind CSS** for styling. All components are fully typed using TypeScript for better type safety and maintainability. Users can browse products, add them to the cart, view cart details, and receive interactive notifications using `react-hot-toast`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- Add, remove, and update products in the cart.
+- View cart summary with real-time updates.
+- Special offers and dynamic price calculations.
+- Fully typed React components with TypeScript.
+- Smooth UI interactions with Tailwind CSS.
+- Notifications with `react-hot-toast`.
+- Responsive design across all devices.
+- Client-side routing using `react-router-dom`.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** (^19.2.0)
+- **TypeScript** (~5.9.3)
+- **Redux Toolkit** (^2.11.2)
+- **React Router DOM** (^7.11.0)
+- **React Hot Toast** (^2.6.0)
+- **Tailwind CSS** (^4.1.18)
+- **Lucide React** (^0.562.0)
+- **Vite** (^7.2.4)
+- **ESLint** (^9.39.1)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Project Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Clone the Repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+```bash
+git clone <your-repo-link>
+cd prolegion_cart
