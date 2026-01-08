@@ -114,7 +114,7 @@ const CartPage: React.FC = () => {
             {/* Price Breakdown */}
             <div className="flex flex-col text-right gap-1 min-w-40">
               <p className="text-gray-600">
-                Item price: £{item.subtotal.toFixed(2)}
+                Item price £{item.price.toFixed(2)} * {item.quantity} = £{item.subtotal.toFixed(2)}
               </p>
 
               {item.saving > 0 && (
