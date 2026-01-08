@@ -51,7 +51,7 @@ const CartPage: React.FC = () => {
   {/* Right: Offers Button */}
   <button
     onClick={() => navigate("/offers")}
-    className="flex items-center gap-1 px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition flex-shrink-0"
+    className="flex items-center cursor-pointer gap-1 px-3 py-1 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 transition flex-shrink-0"
   >
     <Tag className="w-4 h-4" />
     <span className="truncate">View Offers</span>
@@ -114,17 +114,17 @@ const CartPage: React.FC = () => {
             {/* Price Breakdown */}
             <div className="flex flex-col text-right gap-1 min-w-40">
               <p className="text-gray-600">
-                Subtotal: £{item.subtotal.toFixed(2)}
+                Item price: £{item.subtotal.toFixed(2)}
               </p>
 
               {item.saving > 0 && (
                 <p className="text-green-600">
-                  Saving: −£{item.saving.toFixed(2)}
+                  Savings: −£{item.saving.toFixed(2)}
                 </p>
               )}
 
               <p className="font-bold text-lg">
-                Total: £{item.finalTotal.toFixed(2)}
+                Item cost: £{item.finalTotal.toFixed(2)}
               </p>
             </div>
           </div>
